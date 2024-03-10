@@ -4,7 +4,7 @@ import { Footer } from "../components/footer/footer";
 
 const Landing = () => {
   return (
-    <div className="w-[clamp(100px,100%,1500px)] flex flex-col border h-[1500px]">
+    <div className="w-[clamp(100px,100%,1500px)] flex flex-col h-[1500px] overflow-hidden">
       <Header />
       <Content />
       <Footer />

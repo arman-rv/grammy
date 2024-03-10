@@ -1,6 +1,6 @@
 const Content = () => {
   return (
-    <div>
+    <div id="gallery" className="mt-[1000px] border">
       <div></div>
     </div>
   );

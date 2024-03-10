@@ -5,11 +5,49 @@
 html,
 body,
 #root {
-  @apply bg-primary text-white;
-  
+  @apply bg-[#eee] text-white dark:bg-primary transition-all;
+
   display: flex;
   justify-content: center;
   width: 100%;
   direction: rtl;
   scrollbar-width: thin;
+}
+
+.shadow-text {
+  text-shadow: 1px 1px 5px #555555d0;
+}
+
+.red-text {
+  @apply text-secondary-400 dark:text-white;
+  text-shadow: none;
+}
+
+/* rotate animation */
+.rotate-animate {
+  -webkit-animation: rotate 60s normal linear infinite;
+  animation: rotate 80s normal linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  75% {
+    -webkit-transform: rotate3d(0, 0, 1, 270deg);
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
 }
