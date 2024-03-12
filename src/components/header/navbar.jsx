@@ -26,7 +26,7 @@ const Navbar = () => {
       className="flex justify-between text-[26px] font-bold items-center px-10"
       data-aos="fade-down"
       data-aos-offset="170"
-      data-aos-duration="1200"
+      data-aos-duration="1500"
       data-aos-anchor="#example-anchor"
     >
       <div className="h-[88px] pt-2">
