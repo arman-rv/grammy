@@ -53,3 +53,50 @@ body,
     transform: rotate3d(0, 0, 1, 360deg);
   }
 }
+
+/* for leaflet map */
+
+.leaflet-container {
+  height: 100%;
+  user-select: none;
+}
+
+.dark .leaflet-layer {
+    filter: brightness(90%) grayscale(10%);
+}
+
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  border: none;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 7px;
+  transform: scale(1.6);
+  margin: 35px 25px;
+}
+
+.leaflet-bar a {
+  @apply bg-secondary ;
+  border-radius: 7px;
+  border: none;
+  color: white;
+}
+.leaflet-bar a:hover {
+  @apply bg-secondary-400 ;
+  
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+@media only screen and (max-width: 580px) {
+  .leaflet-touch .leaflet-bar {
+    border-radius: 7px;
+    gap: 7px;
+    transform: scale(1.13);
+    margin: 13px 11px;
+  }
+}

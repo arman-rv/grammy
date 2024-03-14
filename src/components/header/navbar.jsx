@@ -12,7 +12,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const Navbar = ({ useAnchor }) => {
+import { Link as Scroll } from "react-scroll";
+
+const Navbar = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -20,16 +22,6 @@ const Navbar = ({ useAnchor }) => {
   const menuClass = "cursor-pointer hover:scale-[1.1] transition pb-1";
 
   const [mode, setMode] = useThemeSwitcher();
-
-
-
-  const scrollToAnchor = (ref) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const [galleryAnchor, aboutUsAnchor, contactUsAnchor] = useAnchor
 
   return (
     <div
@@ -52,26 +44,22 @@ const Navbar = ({ useAnchor }) => {
           منو
         </Link>
         <span className={cn(menuClass, "red-text")}>|</span>
-        <div
+        <Scroll
+          to="gallery"
+          smooth
+          duration={1000}
           className={cn(menuClass, "red-text")}
-          onClick={() => scrollToAnchor(galleryAnchor)}
         >
           گالری
-        </div>
+        </Scroll>
         <span>|</span>
-        <div
-          className={menuClass}
-          onClick={() => scrollToAnchor()}
-        >
+        <Scroll to="aboutUs" smooth duration={1000} className={menuClass}>
           درباره ما
-        </div>
+        </Scroll>
         <span>|</span>
-        <div
-          className={menuClass}
-          onClick={() => scrollToAnchor()}
-        >
+        <Scroll className={menuClass} to="contactUs" smooth duration={1000}>
           ارتباط با ما
-        </div>
+        </Scroll>
       </div>
       <button
         className="h-10 w-10  -mt-3 rounded-full"

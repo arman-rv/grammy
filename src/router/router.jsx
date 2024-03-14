@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Landing from "../pages/landing";
-import Menu from "../pages/menu";
 import NotFound404 from "../pages/notFound404";
+import MenuPage from "../pages/menuPage";
 
 export const router = createBrowserRouter([
   {
@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/menu",
-    element: <Menu />,
+    element: <MenuPage />,
   },
   {
     path: "*",

@@ -3,6 +3,7 @@ import upIcon from "../assets/images/upIcon.png";
 import { MoonIcon, SunIcon } from "./header/icon";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import {cn} from "../../libs/utils"
+import { Link } from "react-scroll";
 
 const ScrollToTop = () => {
   const [mode, setMode] = useThemeSwitcher();
@@ -22,15 +23,17 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    <div className={cn("fixed transition-all w-16 h-32 duration-300 bottom-12 ease-out" ,show ? "left-10 visible opacity-100" : "left-0 invisible opacity-0")}>
+    <div className={cn("fixed transition-all w-16 h-32 duration-300 bottom-12 ease-out z-[999]" ,show ? "left-14 visible opacity-100" : "left-0 invisible opacity-0")}>
       <button
         className="h-1/2 w-full rounded-full p-3 bg-secondary mb-3"
         onClick={() => setMode(mode == "dark" ? "light" : "dark")}
       >
         {mode == "dark" ? <MoonIcon /> : <SunIcon />}
       </button>
-      <a
-        onClick={() => window.scrollTo({behavior:"smooth" , top:0} )}
+      <Link
+        to="navbar"
+        smooth
+        duration={1000}
         className="cursor-pointer flex items-center justify-center rounded-full bg-secondary w-full h-1/2 p-3"
       >                                                                        
         <img
@@ -38,7 +41,7 @@ const ScrollToTop = () => {
           alt="Grammy"
           className="invert-[100%] w-full h-full"
         />
-      </a>
+      </Link>
     </div>
   );
 };
