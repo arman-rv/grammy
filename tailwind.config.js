@@ -10,9 +10,12 @@ export default {
           700: "#0B0B0B",
         },
         secondary: {
-          400:"#c10006",
+          400: "#c10006",
           DEFAULT: "#B10006",
         },
+      },
+      fontFamily: {
+        grammy: "Merriweather",
       },
     },
   },

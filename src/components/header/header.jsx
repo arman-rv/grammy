@@ -8,7 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const Header = () => {
+const Header = ({useAnchor}) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <div className="flex justify-between gap-3 relative">
       <div className="relative z-50 w-full">
-        <Navbar />
+        <Navbar useAnchor={useAnchor} />
         <HeroSection />
       </div>
       <div className="absolute w-full top-0 right-0 flex justify-between">

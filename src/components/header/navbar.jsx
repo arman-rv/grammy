@@ -12,7 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const Navbar = () => {
+const Navbar = ({ useAnchor }) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -21,9 +21,20 @@ const Navbar = () => {
 
   const [mode, setMode] = useThemeSwitcher();
 
+
+
+  const scrollToAnchor = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const [galleryAnchor, aboutUsAnchor, contactUsAnchor] = useAnchor
+
   return (
     <div
-      className="flex justify-between text-[26px] font-bold items-center px-10"
+      id="navbar"
+      className="flex justify-between text-[26px] font-bold items-center px-10 select-none"
       data-aos="fade-down"
       data-aos-offset="170"
       data-aos-duration="1500"
@@ -41,13 +52,26 @@ const Navbar = () => {
           منو
         </Link>
         <span className={cn(menuClass, "red-text")}>|</span>
-        <a href="/#gallery" className={cn(menuClass, "red-text")}>
+        <div
+          className={cn(menuClass, "red-text")}
+          onClick={() => scrollToAnchor(galleryAnchor)}
+        >
           گالری
-        </a>
+        </div>
         <span>|</span>
-        <Link className={menuClass}>درباره ما</Link>
+        <div
+          className={menuClass}
+          onClick={() => scrollToAnchor()}
+        >
+          درباره ما
+        </div>
         <span>|</span>
-        <Link className={menuClass}>ارتباط با ما</Link>
+        <div
+          className={menuClass}
+          onClick={() => scrollToAnchor()}
+        >
+          ارتباط با ما
+        </div>
       </div>
       <button
         className="h-10 w-10  -mt-3 rounded-full"

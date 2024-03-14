@@ -16,7 +16,7 @@ const HeroSection = () => {
       data-aos-anchor="#example-anchor"
     >
       <div className="w-1/2 flex flex-col pr-32 pl-24 pt-14 gap-12">
-        <h1 className="red-text text-8xl font-semibold font-serif">Grammy</h1>
+        <h1 className="font-grammy red-text text-8xl font-semibold">Grammy</h1>
         <p className="text-stone-700 text-2xl font-semibold leading-8 dark:text-white pr-1">
           {" "}
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
