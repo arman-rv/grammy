@@ -6,7 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+html {
+  @apply bg-stone-950;
+}
+
 body,
 #root {
   @apply bg-[#eee] text-white dark:bg-primary transition-all;

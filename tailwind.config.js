@@ -18,6 +18,7 @@ export default {
         grammy: "Merriweather",
         emza:"Whisper"
       },
+      
     },
   },
   plugins: [],

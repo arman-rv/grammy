@@ -10,7 +10,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="">
+    <div>
       <div className="w-full" onDoubleClick={() => handleMenu()}>
         <img src={showMenu ? menu : menuSec} alt="menu" className="w-full" />
       </div>

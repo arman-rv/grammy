@@ -8,9 +8,14 @@ import { useEffect } from "react";
 
 import gif1 from "../../assets/gif1.gif";
 import gif2 from "../../assets/gif2.gif";
+import spaceBg from "../../assets/svg/spaceBg.svg";
+import mainLogo from "../../assets/images/logo.png";
 
-import double from "../../assets/svg/double.svg";
 import { Slider } from "../slider";
+
+import space1 from "../../assets/our-space/space1.jpg";
+import space7 from "../../assets/our-space/space7.jpg";
+import space8 from "../../assets/our-space/space8.jpg";
 
 const Content = () => {
   useEffect(() => {
@@ -29,6 +34,7 @@ const Content = () => {
 
   return (
     <div id="gallery" className=" mt-24 px-10 flex flex-col gap-10 pt-32">
+      {/* gallery */}
       <div
         className="relative overflow-hidden w-full select-none h-[310px] rounded-2xl"
         style={{ direction: "ltr" }}
@@ -48,7 +54,9 @@ const Content = () => {
         </div>
       </div>
 
-      <div className="flex w-full rounded-full overflow-hidden h-[310px] items-center mt-16">
+      {/* gif element */}
+      <div id="aboutUs"></div>
+      <div className="flex w-full rounded-full overflow-hidden h-[310px] items-center mt-24">
         <div
           className="h-full w-1/3  relative z-50"
           data-aos="fade-left"
@@ -67,9 +75,7 @@ const Content = () => {
             کبابی گرمی با سالها تجربه بهترین طعم ها را خلق میکند...
           </p>
 
-          <div
-            className="font-grammy text-secondary-400 flex flex-col gap-3"
-          >
+          <div className="font-grammy text-secondary-400 flex flex-col gap-3">
             <Slider
               sliderItems={scrollXItems.map((item, index) => {
                 return (
@@ -109,7 +115,7 @@ const Content = () => {
             data-aos-duration="1500"
           >
             Grammy kebab , enjoy the best persian food...{" "}
-          </p> 
+          </p>
         </div>
         <div
           className="w-1/3 h-full relative z-50"
@@ -118,6 +124,79 @@ const Content = () => {
           data-aos-duration="1500"
         >
           <img src={gif2} className="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      {/* our space */}
+      <div className="flex h-[700px] mt-20  select-none">
+        <div className="w-3/5 flex flex-col gap-6 p-7">
+          <div
+            className="flex h-1/2 gap-6 w-full"
+            data-aos="fade-left"
+            data-aos-offset="130"
+            data-aos-duration="1500"
+          >
+            <div className="w-1/2 h-full">
+              <img
+                src={space1}
+                className="w-full h-full rounded-2xl object-cover"
+              />
+            </div>
+            <div className="w-1/2 h-full">
+              <img
+                src={space8}
+                className="w-full h-full rounded-2xl object-cover"
+              />
+            </div>
+          </div>
+          <img
+            src={space7}
+            className="h-1/2 object-cover rounded-2xl w-full"
+            data-aos="fade-up"
+            data-aos-offset="130"
+            data-aos-duration="1500"
+          />
+        </div>
+
+        <div
+          className="w-2/5 pt-7 relative"
+          data-aos="fade-right"
+          data-aos-offset="150"
+          data-aos-duration="1500"
+        >
+          <div className="w-full h-full absolute bottom-0 left-0 pt-7">
+            <div className="w-full overflow-hidden h-full scale-x-[-1] relative rounded-2xl">
+              <img
+                src={spaceBg}
+                className="w-full scale-[2.3] absolute top-44 right-0"
+              />
+              <img
+                src={mainLogo}
+                className="scale-x-[-1] w-36 absolute bottom-[245px] right-[95px] 2xl:bottom-[233px] 2xl:right-[103px]"
+              />
+            </div>
+          </div>
+
+          <div className="w-3/5 2xl:pr-4 text-center pl-20">
+            <h2 className="dark:text-[#eee] text-secondary-400 drop-shadow-[1px_1px_0_#c10006] dark:drop-shadow-[0.5px_0.5px_0_#ccc] dark:shadow-none text-[89px] leading-[1] font-emza ">
+              Grammy
+            </h2>
+            <p className="text-xl text-primary dark:text-white pt-14  font-bold dark:font-normal">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و تکنولوژی مورد نیاز
+            </p>
+            <p
+              className="pt-24 text-xl text-primary dark:text-white font-bold dark:font-normal"
+              data-aos="fade-up"
+              data-aos-offset="130"
+              data-aos-duration="1500"
+            >
+              Lorem Ipsum Generator Generate Lorem Ipsum placeholder text.
+              Select the number of characters, words, sentences or paragraphs,
+              and hit generate!
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -34,7 +34,7 @@ const Footer = () => {
           className="h-[430px] w-2/5 flex flex-col gap-8 pr-5 pt-6"
           data-aos="fade-left"
           data-aos-offset="170"
-          data-aos-duration="2000"
+          data-aos-duration="1500"
         >
           <div className="flex gap-5">
             <Items
@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col justify-between text-center pl-14 gap-5 select-none">
-            <h2 className="text-[80px] leading-[75px] mt-1 font-emza">Grammy </h2>
+            <h3 className="text-[80px] leading-[75px] mt-1 font-emza">Grammy </h3>
             <p className="text-xl pt-2 ">
               build with
               <span className="text-2xl"> &hearts; </span>
@@ -107,9 +107,9 @@ const Footer = () => {
 
         <div
           className="w-3/5 h-[400px] rounded-2xl overflow-hidden relative mt-4"
-          data-aos="fade-up"
+          data-aos="fade-right"
           data-aos-offset="170"
-          data-aos-duration="2000"
+          data-aos-duration="1500"
         >
           <Map />
           <img
