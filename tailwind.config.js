@@ -16,6 +16,7 @@ export default {
       },
       fontFamily: {
         grammy: "Merriweather",
+        emza:"Whisper"
       },
     },
   },

@@ -10,6 +10,7 @@ import {
   Pagination,
   Navigation,
 } from "swiper/modules";
+import { useEffect } from "react";
 
 const Slider = ({
   sliderItems,
@@ -18,23 +19,36 @@ const Slider = ({
   coverflowEffect,
   pagination,
   navigation,
+  reverseDirection,
+  slidesPerView,
+  delay,
+  spaceBetween,
+  speed,
+  className,
+  smoothScroll,
 }) => {
+  // useEffect(() => {
+  //   const element = document.querySelector(".swiper-wrapper");
+  //   element.setAttribute("style", "transition-timing-function: Linear;");
+  // }, []);
+  
   return (
     <>
       <Swiper
         autoplay={{
-          delay: 1500,
+          delay: delay,
           disableOnInteraction: false,
+          reverseDirection: reverseDirection,
         }}
         grabCursor={true}
-        slidesPerView={4}
-        spaceBetween={29}
+        slidesPerView={slidesPerView}
+        spaceBetween={spaceBetween}
         loop={true}
-        speed={1500}
+        speed={speed}
         pagination={pagination}
         navigation={navigation}
         modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
-        className="mx-auto h-full w-full overflow-visible "
+        className={className}
         effect={effect}
         centeredSlides={centeredSlides}
         coverflowEffect={coverflowEffect}

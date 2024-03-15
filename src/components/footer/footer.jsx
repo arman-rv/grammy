@@ -4,6 +4,8 @@ import phone from "../../assets/icons/phone.png";
 import marker from "../../assets/icons/marker.png";
 import user from "../../assets/icons/user.png";
 import clock from "../../assets/icons/clock.png";
+import instagramLogo from "../../assets/icons/instagramLogo.png";
+import email from "../../assets/icons/email.png";
 import logo from "../../assets/images/logoSelf.png";
 
 import { Map } from "./map";
@@ -12,6 +14,8 @@ import useThemeSwitcher from "../hooks/useThemeSwitcher";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Items } from "./footerItems";
 
 const Footer = () => {
   useEffect(() => {
@@ -27,47 +31,82 @@ const Footer = () => {
       </div>
       <div className="flex relative z-50 px-10 items-center pb-12 gap-10">
         <div
-          className="h-[430px] w-2/5 flex flex-col gap-9 pr-7 pt-12"
+          className="h-[430px] w-2/5 flex flex-col gap-8 pr-5 pt-6"
           data-aos="fade-left"
           data-aos-offset="170"
           data-aos-duration="2000"
         >
-          <div className="flex w-full items-center gap-4">
-            <div className=" overflow-hidden w-14 rounded-full">
-              <img src={phone} alt="phone" className="w-full scale-[1.3]" />
-            </div>
-            <p className="text-[28px]">
-              <span className="font-bold">شماره تماس : </span> 01133700038
-            </p>
+          <div className="flex gap-5">
+            <Items
+              name="phone"
+              image={phone}
+              title="شماره تماس : "
+              desc="01133700038"
+              link={true}
+              href="tel:01133700038"
+            />
+            <Items
+              name="phone"
+              image={user}
+              title="مدیریت : "
+              desc="امیر علی ابراهیمی"
+            />
           </div>
-          <div className="flex w-full items-center gap-4">
-            <div className=" overflow-hidden w-14 rounded-full">
-              <img src={clock} alt="phone" className="w-full" />
-            </div>
-            <p className="text-[28px]">
-              <span className="font-bold"> ساعت کاری : </span> 9 تا 12 شب
-            </p>
+
+          <div className="flex gap-5">
+            {" "}
+            <Items
+              name="phone"
+              image={clock}
+              title="ساعت کاری : "
+              desc="9 صبح تا 12 شب"
+            />
+            <Items
+              name="phone"
+              image={marker}
+              title="آدرس : "
+              desc="ابتدای سیدالشهدا"
+              link={true}
+              href="https://maps.app.goo.gl/dN4cfS7gg9hsru2dA"
+            />
           </div>
-          <div className="flex w-full items-center gap-4">
-            <div className=" overflow-hidden w-14 rounded-full">
-              <img src={user} alt="phone" className="w-full scale-[1.3]" />
-            </div>
-            <p className="text-[28px]">
-              <span className="font-bold"> مدیریت : </span> امیر علی ابراهیمی
-            </p>
+          <div className="flex gap-5">
+            <Items
+              name="phone"
+              image={instagramLogo}
+              title="اینستاگرام : "
+              desc="grammy.kebab"
+              className="invert-[100%] scale-150 p-2"
+              link={true}
+              href="https://www.instagram.com/grammy.kebab/"
+            />
+
+            <Items
+              name="phone"
+              image={email}
+              title="ایمیل : "
+              desc="grammy@gmail"
+              className="invert-[100%] scale-125"
+              link={true}
+              href="mailto:grammy.kebab@gmail.com"
+            />
           </div>
-          <div className="flex w-full items-center gap-4">
-            <div className=" overflow-hidden w-14 rounded-full">
-              <img src={marker} alt="phone" className="w-full scale-[1.3]" />
-            </div>
-            <p className="text-[28px] pt-1">
-              <span className="font-bold"> آدرس : </span> میدان خزر،ابتدای
-              سیدالشهدا
+
+          <div className="flex flex-col justify-between text-center pl-14 gap-5 select-none">
+            <h2 className="text-[80px] leading-[75px] mt-1 font-emza">Grammy </h2>
+            <p className="text-xl pt-2 ">
+              build with
+              <span className="text-2xl"> &hearts; </span>
+              by
+              <Link className="underline pl-2" to="mailto:pendingcoding@gmail.com">
+                 arman rezvani
+              </Link>
             </p>
           </div>
         </div>
+
         <div
-          className="w-3/5 h-[430px] rounded-2xl overflow-hidden relative"
+          className="w-3/5 h-[400px] rounded-2xl overflow-hidden relative mt-4"
           data-aos="fade-up"
           data-aos-offset="170"
           data-aos-duration="2000"

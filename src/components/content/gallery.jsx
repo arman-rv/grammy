@@ -27,10 +27,18 @@ const Gallery = () => {
     image12,
     image13,
   ];
-  const mmd = sliderItems.map((image, index) => {
-    return <Items image={image} key={index} />;
-  });
-  return <Slider sliderItems={mmd} />;
+  return (
+    <Slider
+      sliderItems={sliderItems.map((image, index) => {
+        return <Items image={image} key={index} />;
+      })}
+      slidesPerView={4}
+      delay={1500}
+      spaceBetween={29}
+      speed={2000}
+      className="mx-auto h-full w-full overflow-visible"
+    />
+  );
 };
 
 export { Gallery };
