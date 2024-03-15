@@ -1,6 +1,6 @@
 import { Gallery } from "./gallery";
-import logo from ".././../assets/images/logoSelf.png";
-import cropHead from "../../assets/svg/cropHead.svg";
+import logo from ".././../assets/images/logo-self.png";
+import cropHead from "../../assets/svg/crop-head.svg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 import gif1 from "../../assets/gif1.gif";
 import gif2 from "../../assets/gif2.gif";
-import spaceBg from "../../assets/svg/spaceBg.svg";
+import spaceBg from "../../assets/svg/space-bg.svg";
 import mainLogo from "../../assets/images/logo.png";
 
 import { Slider } from "../slider";

@@ -1,8 +1,7 @@
 import { Header } from "../components/header/header";
 import { Content } from "../components/content/content";
-import { ScrollToTop } from "../components/scrollToTop";
-import { useRef } from "react";
 import { Footer } from "../components/footer/footer";
+import { ScrollToTop } from "../components/scroll-to-top";
 
 const Landing = () => {
   return (

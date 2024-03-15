@@ -6,7 +6,7 @@ import user from "../../assets/icons/user.png";
 import clock from "../../assets/icons/clock.png";
 import instagramLogo from "../../assets/icons/instagramLogo.png";
 import email from "../../assets/icons/email.png";
-import logo from "../../assets/images/logoSelf.png";
+import logo from "../../assets/images/logo-self.png";
 
 import { Map } from "./map";
 import useThemeSwitcher from "../hooks/useThemeSwitcher";
@@ -15,7 +15,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Items } from "./footerItems";
+import { Items } from "./footer-items";
 
 const Footer = () => {
   useEffect(() => {

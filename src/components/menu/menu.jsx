@@ -1,6 +1,6 @@
 import { useState } from "react";
 import menu from "../../assets/images/menu.jpg";
-import menuSec from "../../assets/images/menuSec.png";
+import menuSec from "../../assets/images/menu-sec.png";
 
 const Menu = () => {
   const [showMenu, setShowMenu] = useState(true);

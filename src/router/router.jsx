@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Landing from "../pages/landing";
-import NotFound404 from "../pages/notFound404";
-import MenuPage from "../pages/menuPage";
+import MenuPage from "../pages/menu-page";
+import NotFound404 from "../pages/not-found-404";
+
 
 export const router = createBrowserRouter([
   {

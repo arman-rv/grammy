@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import upIcon from "../assets/images/upIcon.png";
+import upIcon from "../assets/images/up-icon.png";
 import { MoonIcon, SunIcon } from "./header/icon";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import {cn} from "../../libs/utils"
