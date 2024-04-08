@@ -63,9 +63,9 @@ const Navbar = () => {
       </div>
       <button
         className="h-10 w-10  -mt-3 rounded-full"
-        onClick={() => setMode(mode == "dark" ? "light" : "dark")}
+        onClick={() => setMode(mode === "dark" ? "light" : "dark")}
       >
-        {mode == "dark" ? <MoonIcon /> : <SunIcon />}
+        {mode === "dark" ? <MoonIcon /> : <SunIcon />}
       </button>
     </div>
   );

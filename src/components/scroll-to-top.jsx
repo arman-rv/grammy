@@ -26,9 +26,9 @@ const ScrollToTop = () => {
     <div className={cn("fixed transition-all w-16 h-32 duration-300 bottom-12 ease-out z-[999]" ,show ? "left-14 visible opacity-100" : "left-0 invisible opacity-0")}>
       <button
         className="h-1/2 w-full rounded-full p-3 bg-secondary mb-3"
-        onClick={() => setMode(mode == "dark" ? "light" : "dark")}
+        onClick={() => setMode(mode === "dark" ? "light" : "dark")}
       >
-        {mode == "dark" ? <MoonIcon /> : <SunIcon />}
+        {mode === "dark" ? <MoonIcon /> : <SunIcon />}
       </button>
       <Link
         to="navbar"

@@ -10,7 +10,8 @@ import {
   Pagination,
   Navigation,
 } from "swiper/modules";
-import { useEffect } from "react";
+
+// import { useEffect } from "react";
 
 const Slider = ({
   sliderItems,

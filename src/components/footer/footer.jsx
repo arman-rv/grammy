@@ -93,13 +93,15 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col justify-between text-center pl-14 gap-5 select-none">
-            <h3 className="text-[80px] leading-[75px] mt-1 font-emza">Grammy </h3>
+            <h3 className="text-[80px] leading-[75px] mt-1 font-emza">
+              Grammy{" "}
+            </h3>
             <p className="text-xl pt-2 ">
               build with
               <span className="text-2xl"> &hearts; </span>
               by
-              <Link className="underline pl-2" to="mailto:pendingcoding@gmail.com">
-                 arman rezvani
+              <Link className="underline pl-2" to="tel:09117828923">
+                arman rezvani
               </Link>
             </p>
           </div>
